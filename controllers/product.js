@@ -84,7 +84,7 @@ exports.update = (req, res) => {
         }
 
         let product = req.product;
-        product = _.extend(product, fields);
+        product = _.extend(product, fields)
 
         if (files.photo) {
             if (files.photo.size > 1000000) {
@@ -96,7 +96,7 @@ exports.update = (req, res) => {
             product.photo.contentType = files.photo.type;
         }
 
-        product.save((err, product) => {
+        product.update((err, product) => {
             if (err) {
                 return res.status(400).json({
                     error: errorHandler(err)
