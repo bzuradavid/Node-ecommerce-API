@@ -1,1 +1,1 @@
-# MERN
+# Node ecommerce API
